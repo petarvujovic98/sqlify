@@ -48,16 +48,11 @@ impl Args {
     /// Format the SQL code.
     fn format(&self) -> String {
         let sql = self.get_sql();
-        let indentation = sql.len() - sql.trim_start().len();
+        let indentation = " ".repeat(sql.len() - sql.trim_start().len());
         let formatted = sqlformat::format(&sql, &sqlformat::QueryParams::None, self.into());
         formatted
             .lines()
-            .map(|line| {
-                format!(
-                    "{}{line}",
-                    (0..indentation).map(|_| " ").collect::<Vec<_>>().join("")
-                )
-            })
+            .map(|line| format!("{indentation}{line}",))
             .collect::<Vec<_>>()
             .join("\n")
     }
