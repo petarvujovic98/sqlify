@@ -3,6 +3,8 @@ name = "sqlify"
 version = "0.1.0"
 edition = "2021"
 authors = ["Petar Vujović <petarvujovic98@gmail.com>"]
+description = "A simple CLI tool for formatting SQL queries."
+license = "MIT OR Apache-2.0"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
