@@ -7,6 +7,14 @@ A CLI tool to format your SQL code.
 This tool utilizes [sqlformat](https://github.com/shssoichiro/sqlformat-rs)
 under the hood to format the given SQL code.
 
+## Installation
+
+To install `sqlify` simply run the `cargo install` command:
+
+```sh
+cargo install sqlify
+```
+
 ## Usage
 
 To use it simply pass in your SQL as the argument, or pipe it from a file, like this:
